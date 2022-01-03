@@ -12,8 +12,8 @@ plugins {
     checkstyle
 }
 
-project.extra["GithubUrl"] = "https://github.com/buracc/unethicalite-plugins"
-project.extra["GithubUserName"] = "buracc"
+project.extra["GithubUrl"] = "https://github.com/unethicalite/unethicalite-plugins"
+project.extra["GithubUserName"] = "unethicalite"
 project.extra["GithubRepoName"] = "unethicalite-plugins"
 
 apply<BootstrapPlugin>()
