@@ -142,7 +142,7 @@ public class HootFighterPlugin extends LoopedPlugin
 			Item bones = Inventory.getFirst(x -> x.hasAction("Bury") || x.hasAction("Scatter"));
 			if (bones != null)
 			{
-				bones.interact(0);
+				bones.interact("Bury");
 				return -1;
 			}
 		}
