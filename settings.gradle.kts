@@ -1,3 +1,12 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlin2js") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+        }
+    }
+}
 /*
  * Copyright (c) 2019 Owain van Brakel <https:github.com/Owain94>
  * All rights reserved.
@@ -25,25 +34,10 @@
 
 rootProject.name = "unethicalite-plugins"
 
-include("hoot-fighter")
-include("hoot-tempoross")
-include("hoot-blackjack")
-include("hoot-trawler")
-include("hoot-pickpocket")
-include("hoot-aerialfishing")
-include("hoot-chins")
-include("hoot-notifier")
-include("hoot-karambwanfisher")
-
-include("unethical-butler")
-include("unethical-kebab-buyer")
-include("unethical-autologin")
-include("unethical-oneclick")
-include("unethical-agility")
-include("unethical-prayer")
-include("unethical-explorer")
-include("unethical-chopper")
-include("example-kotlin")
+include("sneaky-miner")
+include("sneaky-thiever")
+include("sneaky-utils")
+include("sneaky-runecrafter")
 
 for (project in rootProject.children) {
     project.apply {
@@ -54,3 +48,4 @@ for (project in rootProject.children) {
         require(buildFile.isFile) { "Project '${project.path} must have a $buildFile build script" }
     }
 }
+
