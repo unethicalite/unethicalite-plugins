@@ -26,8 +26,6 @@ import net.unethicalite.api.widgets.Widgets;
 import org.jboss.aerogear.security.otp.Totp;
 import org.pf4j.Extension;
 
-import java.util.concurrent.TimeUnit;
-
 @PluginDescriptor(name = "Unethical Auto Login", enabledByDefault = false)
 @Extension
 @Slf4j
