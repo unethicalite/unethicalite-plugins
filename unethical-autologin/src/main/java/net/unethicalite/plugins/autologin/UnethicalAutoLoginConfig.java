@@ -93,7 +93,7 @@ public interface UnethicalAutoLoginConfig extends Config
 	@ConfigItem(
 			keyName = "loginOnDC",
 			name = "Login On Disconnect",
-			description = "Automatically logins when the game disconnects.",
+			description = "Automatically logs in after disconnection",
 			position = 6
 	)
 	default boolean loginOnDC()
