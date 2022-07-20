@@ -167,7 +167,7 @@ public class UnethicalAutoLoginPlugin extends Plugin
 
 	private void progressLogin()
 	{
-		if(config.loginOnDC())
+		if (config.loginOnDC())
 		{
 			Keyboard.sendEnter();
 		}
@@ -175,7 +175,7 @@ public class UnethicalAutoLoginPlugin extends Plugin
 
 	private void skipDCMenu()
 	{
-		if(config.loginOnDC())
+		if (config.loginOnDC())
 		{
 			Mouse.click(380, 300, true);
 		}
