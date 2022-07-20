@@ -89,4 +89,15 @@ public interface UnethicalAutoLoginConfig extends Config
 	{
 		return false;
 	}
+
+	@ConfigItem(
+			keyName = "loginOnDC",
+			name = "Login On Disconnect",
+			description = "Automatically logins when the game disconnects.",
+			position = 6
+	)
+	default boolean loginOnDC()
+	{
+		return false;
+	}
 }

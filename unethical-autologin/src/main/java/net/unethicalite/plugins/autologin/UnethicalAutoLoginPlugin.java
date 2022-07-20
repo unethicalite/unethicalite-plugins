@@ -26,6 +26,8 @@ import net.unethicalite.api.widgets.Widgets;
 import org.jboss.aerogear.security.otp.Totp;
 import org.pf4j.Extension;
 
+import java.util.concurrent.TimeUnit;
+
 @PluginDescriptor(name = "Unethical Auto Login", enabledByDefault = false)
 @Extension
 @Slf4j
@@ -60,6 +62,12 @@ public class UnethicalAutoLoginPlugin extends Plugin
 	{
 		switch (e.getIndex())
 		{
+			case 0:
+				progressLogin();
+				break;
+			case 24:
+				skipDCMenu();
+				break;
 			case 2:
 				login();
 				break;
@@ -157,5 +165,21 @@ public class UnethicalAutoLoginPlugin extends Plugin
 	{
 		client.setOtp(new Totp(config.auth()).now());
 		Keyboard.sendEnter();
+	}
+
+	private void progressLogin()
+	{
+		if(config.loginOnDC())
+		{
+			Keyboard.sendEnter();
+		}
+	}
+
+	private void skipDCMenu()
+	{
+		if(config.loginOnDC())
+		{
+			Mouse.click(380, 300, true);
+		}
 	}
 }
